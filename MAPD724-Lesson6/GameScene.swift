@@ -13,6 +13,9 @@ class GameScene: SKScene {
     
     // instance variables
     var ocean: Ocean?
+    var island: Island?
+    var plane: Plane?
+    var clouds: [Cloud] = []
     
     
     override func didMove(to view: SKView) {
@@ -26,19 +29,36 @@ class GameScene: SKScene {
         ocean?.position = CGPoint(x: 0, y: 773)
         addChild(ocean!)
         
+        //add island
+        island = Island()
+        addChild(island!)
+        
+        //add plane
+        plane = Plane()
+        plane?.position = CGPoint(x: 0, y: -495)
+        addChild(plane!)
+        
+        //add clouds
+        for index in 0...2
+        {
+            let cloud: Cloud = Cloud()
+            clouds.append(cloud)
+            addChild(clouds[index])
+        }
+        
     }
     
     
     func touchDown(atPoint pos : CGPoint) {
-  
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-  
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
     }
     
     func touchUp(atPoint pos : CGPoint) {
-
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -60,5 +80,16 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         ocean?.Update()
+        island?.Update()
+        plane?.Update()
+        
+        CollisionManager.SquareRadiusCheck(object1: plane!, object2: island!)
+        
+        for cloud in clouds{
+            cloud.Update()
+            CollisionManager.SquareRadiusCheck(object1: plane!, object2: cloud)
+        }
+        
+        
     }
 }

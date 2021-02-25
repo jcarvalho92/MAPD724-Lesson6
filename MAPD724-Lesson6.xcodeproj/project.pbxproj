@@ -18,6 +18,10 @@
 		C8DB57C025E72716004ED79D /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57BF25E72716004ED79D /* GameProtocol.swift */; };
 		C8DB57C325E727BB004ED79D /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57C225E727BB004ED79D /* GameObject.swift */; };
 		C8DB57C725E72E50004ED79D /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57C625E72E50004ED79D /* Ocean.swift */; };
+		C8DB57CA25E73C62004ED79D /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57C925E73C62004ED79D /* Island.swift */; };
+		C8DB57CC25E74161004ED79D /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57CB25E74161004ED79D /* Cloud.swift */; };
+		C8DB57CE25E74649004ED79D /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57CD25E74649004ED79D /* Plane.swift */; };
+		C8DB57D125E74B7A004ED79D /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB57D025E74B7A004ED79D /* CollisionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		C8DB57BF25E72716004ED79D /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		C8DB57C225E727BB004ED79D /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		C8DB57C625E72E50004ED79D /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		C8DB57C925E73C62004ED79D /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		C8DB57CB25E74161004ED79D /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		C8DB57CD25E74649004ED79D /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		C8DB57D025E74B7A004ED79D /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		C8DB57A425E71DE0004ED79D /* MAPD724-Lesson6 */ = {
 			isa = PBXGroup;
 			children = (
+				C8DB57CF25E74B5B004ED79D /* Managers */,
 				C8DB57C525E72E2B004ED79D /* New Group */,
 				C8DB57C125E7278D004ED79D /* Core */,
 				C8DB57A525E71DE0004ED79D /* AppDelegate.swift */,
@@ -94,8 +103,19 @@
 			isa = PBXGroup;
 			children = (
 				C8DB57C625E72E50004ED79D /* Ocean.swift */,
+				C8DB57C925E73C62004ED79D /* Island.swift */,
+				C8DB57CB25E74161004ED79D /* Cloud.swift */,
+				C8DB57CD25E74649004ED79D /* Plane.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C8DB57CF25E74B5B004ED79D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C8DB57D025E74B7A004ED79D /* CollisionManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DB57AC25E71DE0004ED79D /* GameScene.swift in Sources */,
+				C8DB57CE25E74649004ED79D /* Plane.swift in Sources */,
+				C8DB57D125E74B7A004ED79D /* CollisionManager.swift in Sources */,
 				C8DB57C025E72716004ED79D /* GameProtocol.swift in Sources */,
 				C8DB57AE25E71DE0004ED79D /* GameViewController.swift in Sources */,
+				C8DB57CA25E73C62004ED79D /* Island.swift in Sources */,
 				C8DB57A625E71DE0004ED79D /* AppDelegate.swift in Sources */,
+				C8DB57CC25E74161004ED79D /* Cloud.swift in Sources */,
 				C8DB57C725E72E50004ED79D /* Ocean.swift in Sources */,
 				C8DB57C325E727BB004ED79D /* GameObject.swift in Sources */,
 			);
@@ -321,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6FT28YTB3;
 				INFOPLIST_FILE = "MAPD724-Lesson6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6FT28YTB3;
 				INFOPLIST_FILE = "MAPD724-Lesson6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
